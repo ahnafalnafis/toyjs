@@ -209,4 +209,6 @@ const Button = (props: ComponentProps): BaseComponent => {
     return new BaseComponent("button", props);
 };
 
+// TODO: Uncaught TypeError: Cannot read properties of null ( reading 'append')
+
 // vim: se fdm=marker sts=4 sw=4:
