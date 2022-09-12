@@ -55,7 +55,7 @@ interface ComponentProps {
 }
 
 /*************************************************
- * Query parser: {{{
+ * Query parser: {{
  ************************************************/
 const _parser = (node: any, props: ComponentProps) => {
     // For IDs
@@ -112,7 +112,7 @@ const _parser = (node: any, props: ComponentProps) => {
     // return node;
 };
 /*************************************************
- * Query parser }}}
+ * Query parser }}
  ************************************************/
 
 // Root of all Components:
@@ -209,6 +209,6 @@ const Button = (props: ComponentProps): BaseComponent => {
     return new BaseComponent("button", props);
 };
 
-// TODO: Uncaught TypeError: Cannot read properties of null ( reading 'append')
+// TODO: Uncaught TypeError: Cannot read properties of null (reading 'append')
 
 // vim: se fdm=marker sts=4 sw=4:
