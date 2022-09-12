@@ -3,7 +3,7 @@
  *************************************/
 let count = 0;
 
-const counter = Box({
+const app = Box({
     child: [
         Subtitle({
             // child: `You have pressed the button ${count} time(s)`,
@@ -37,14 +37,11 @@ const counter = Box({
     ],
 });
 
-// Load
-document.body.append(counter.render());
-
 /*************************************
  * Light bulb test
  *************************************/
 // document.body.style.backgroundColor = "dimgrey";
-// const bulbContainer = Box({
+// const app = Box({
 //     child: Box({
 //         id: "bulb",
 //         style: {
@@ -72,5 +69,5 @@ document.body.append(counter.render());
 //     },
 // });
 
-// // Load
-// document.body.append(bulbContainer.render());
+// Load
+document.body.append(app.render());
