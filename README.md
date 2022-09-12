@@ -1,5 +1,10 @@
 # ToyJS
-A simple, Flutter inspired JavaScript web framework.
 
-## TODO:
-fix bugs
+A simple JavaScript web framework. Inspired by Flutter.
+
+**TODO:**
+
+-   **FIX**: Uncaught TypeError: Cannot read properties of null (reading 'append')
+-   Make `node` compatible
+-   Modularize
+-   Add bundler
