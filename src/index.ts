@@ -14,7 +14,6 @@ const vw = (value: number): string => `${value}vw`;
 const vh = (value: number): string => `${value}vh`;
 const vmin = (value: number): string => `${value}vmin`;
 const vmax = (value: number): string => `${value}vmax`;
-// const pr = (value: number): string => `${value}%`;
 
 // CSS functions:
 const rgb = (red: number, green: number, blue: number): string =>
@@ -27,8 +26,6 @@ const rgba = (
     alpha: number
 ): string => `rgba(${red}, ${green}, ${blue}, ${alpha})`;
 
-// const blur = (value: string) => `blur(${value})`;
-
 // Property interfaces:
 interface Style {
     accentColor?: string;
@@ -38,6 +35,17 @@ interface Style {
     all?: string;
     animation?: string;
     animationDelay?: string;
+
+    border?: any;
+    borderRadius?: any;
+    color?: any;
+    backgroundColor?: any;
+    fontSize?: any;
+    display?: any;
+    padding?: any;
+    width?: any;
+    height?: any;
+    justifyContent?: any;
 }
 
 interface Events {
@@ -158,7 +166,8 @@ const $ = (
                         .filter((n: any) => {
                             return n != "";
                         });
-                    for (let i of _cssList) {
+                    let i: string | string[];
+                    for (i of _cssList) {
                         i = i.split(":");
                         let _css_prop = i[0].trim();
                         let _css_prop_value = i[1].trim();
@@ -180,35 +189,45 @@ const $ = (
 };
 
 // Box Component. similar to `<div></div>`
-const Box = (props: ComponentProps): BaseComponent => {
-    return new BaseComponent("div", props);
-};
+class Box extends BaseComponent {
+    constructor(props: ComponentProps) {
+        super("div", props);
+    }
+}
 
 // Field Component. similar to `<span></span>`
-const Field = (props: ComponentProps): BaseComponent => {
-    return new BaseComponent("span", props);
-};
+class Field extends BaseComponent {
+    constructor(props: ComponentProps) {
+        super("span", props);
+    }
+}
 
 // Title Component. similar to `<h1></h1>`
-const Title = (props: ComponentProps): BaseComponent => {
-    return new BaseComponent("h1", props);
-};
+class Title extends BaseComponent {
+    constructor(props: ComponentProps) {
+        super("h1", props);
+    }
+}
 
 // Subtitle Component. similar to `<h2></h2>`
-const Subtitle = (props: ComponentProps): BaseComponent => {
-    return new BaseComponent("h2", props);
-};
+class Subtitle extends BaseComponent {
+    constructor(props: ComponentProps) {
+        super("h2", props);
+    }
+}
 
 // Paragraph Component. similar to `<p></p>`
-const Paragraph = (props: ComponentProps): BaseComponent => {
-    return new BaseComponent("p", props);
-};
+class Paragraph extends BaseComponent {
+    constructor(props: ComponentProps) {
+        super("p", props);
+    }
+}
 
 // Button Component. similar to `<button></button>`
-const Button = (props: ComponentProps): BaseComponent => {
-    return new BaseComponent("button", props);
-};
+class Button extends BaseComponent {
+    constructor(props: ComponentProps) {
+        super("button", props);
+    }
+}
 
 // TODO: Uncaught TypeError: Cannot read properties of null (reading 'append')
-
-// vim: se fdm=marker sts=4 sw=4:

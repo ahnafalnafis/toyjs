@@ -1,6 +1,6 @@
 document.body.style.backgroundColor = "dimgrey";
-const app = Box({
-    child: Box({
+const bulb = new Box({
+    child: new Box({
         id: "bulb",
         style: {
             width: px(200),
@@ -28,4 +28,4 @@ const app = Box({
 });
 
 // Load
-document.body.append(app.render());
+document.body.append(bulb.render());

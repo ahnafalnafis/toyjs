@@ -1,19 +1,19 @@
 let count = 0;
 
-const app = Box({
+const counter = new Box({
     child: [
-        Subtitle({
+        new Subtitle({
             // child: `You have pressed the button ${count} time(s)`,
             child: [
                 "You have pressed the button ",
-                Field({
+                new Field({
                     child: count,
                     id: "count",
                 }),
                 " time(s)",
             ],
         }),
-        Button({
+        new Button({
             child: "Increment",
             id: "inc-button",
             style: {
@@ -35,4 +35,4 @@ const app = Box({
 });
 
 // Load
-document.body.append(app.render());
+document.body.append(counter.render());
