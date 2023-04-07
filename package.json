@@ -1,0 +1,27 @@
+{
+    "name": "toyjs",
+    "version": "1.0.0",
+    "description": "A simple JavaScript web framework. Inspired by Flutter.",
+    "main": "index.js",
+    "scripts": {
+        "clean": "rm -rf ./dist",
+        "build": "tsc   # 😅 I know it's hilarious but it's okay.",
+        "dev": "tsc -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ahnafalnafis/ToyJS.git"
+    },
+    "keywords": [
+        "ToyJS",
+        "Toy.js",
+        "toy-js",
+        "toy.js"
+    ],
+    "author": "Ahnaf Al Nafis <ahnafalnafis@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ahnafalnafis/ToyJS/issues"
+    },
+    "homepage": "https://github.com/ahnafalnafis/ToyJS#readme"
+}

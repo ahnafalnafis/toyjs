@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        /* Yes, ES5. Because, IE doesn't support higher than this version. See more:
+            https://www.w3schools.com/js/js_versions.asp#:~:text=Browser%20Support%20for%20ES5%20(2009)
+        */
+        "outDir": "./dist",
+        "removeComments": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true
+    },
+    "exclude": ["test"]
+}
