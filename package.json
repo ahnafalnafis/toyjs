@@ -1,27 +1,38 @@
 {
-    "name": "toyjs",
-    "version": "1.0.0",
-    "description": "A simple JavaScript web framework. Inspired by Flutter.",
-    "main": "index.js",
-    "scripts": {
-        "clean": "rm -rf ./dist",
-        "build": "tsc   # 😅 I know it's hilarious but it's okay.",
-        "dev": "tsc -w"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ahnafalnafis/ToyJS.git"
-    },
-    "keywords": [
-        "ToyJS",
-        "Toy.js",
-        "toy-js",
-        "toy.js"
-    ],
-    "author": "Ahnaf Al Nafis <ahnafalnafis@gmail.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/ahnafalnafis/ToyJS/issues"
-    },
-    "homepage": "https://github.com/ahnafalnafis/ToyJS#readme"
+  "author": "Ahnaf Al Nafis <ahnafalnafis@gmail.com>",
+  "name": "toyjs",
+  "version": "1.0.0",
+  "description": "A simple JavaScript web framework. Inspired by Flutter.",
+  "main": "./dist/index",
+  "type": "commonjs",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "tsc && webpack --progress",
+    "watch:wp": "webpack --watch --progress",
+    "watch:ts": "tsc --watch",
+    "dev": "concurrently --kill-others 'watch:ts' 'watch:wp'"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahnafalnafis/toyjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahnafalnafis/toyjs/issues"
+  },
+  "homepage": "https://github.com/ahnafalnafis/toyjs#readme",
+  "keywords": [
+    "ToyJS",
+    "toyjs",
+    "Toy.js",
+    "toy-js",
+    "toy.js"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22",
+    "typescript": "^5.0.4",
+    "webpack": "^5.78.0",
+    "webpack-cli": "^5.0.1"
+  }
 }
